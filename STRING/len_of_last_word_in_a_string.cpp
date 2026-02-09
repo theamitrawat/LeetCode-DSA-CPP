@@ -8,22 +8,18 @@ public:
     int lengthOfLastWord(string s)
     {
         int i = s.size() - 1;
-
-        // Skip trailing spaces
         while (i >= 0 && s[i] == ' ')
         {
             i--;
         }
 
         int len = 0;
-
         // Count length of last word
         while (i >= 0 && s[i] != ' ')
         {
             len++;
             i--;
         }
-
         return len;
     }
 };
@@ -31,7 +27,6 @@ public:
 int main()
 {
     Solution obj;
-
     string s;
     getline(cin, s); // Read full sentence including spaces
 
